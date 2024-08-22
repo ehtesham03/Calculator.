@@ -1,0 +1,88 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">DOM</h1>
+    <h1 id="heading">DOM</h1>
+
+   <button onclick="" >
+
+   </button>
+    <script>
+// document.getElementById("heading").innerHTML = "Data Changed";
+  let x =  document.getElementsByTagName("h1")
+        function changetag(){
+            for (let i = 0; i <xs.length, i++;) {
+                xs[i].innerHTML = "Data is Changing";
+    
+        }
+    }
+
+
+</script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        <div id="heading">
+            Weather
+        </div>
+    </h1>
+
+    <form action="">
+        <label for="city">Enter City:</label>
+        <input type="text" value="0" id="city" name="city">
+        <input type="text" value="0" id="state" name="state">
+       
+    </form>
+    <h1 id="show">Show-Data</h1>
+    <button onclick="changedata()">-Info </button>
+    <!-- <input type="text" value="DOM" id="Inputid"> -->
+    
+  
+
+    <script>
+            let x=document.getElementById("inputid");
+            console.log(x1.value);            document.getElementById("heading").innerHTML=x1.value
+
+        // let ide = 'f6ff2dc49c51b6b97271d341d39dcd53';
+        // let url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=lahore&appid=${ide}`;
+
+        // function changetag() {
+        //     let x = document.getElementsByTagName("h1");
+        //     fetch(url)
+        //         .then(response => {
+        //             return response.json();
+        //         })
+        //         .then(data => {
+        //             let temp = data.main.temp;
+        //             let city = data.name;
+        //             for (let i = 0; i < x.length; i++) {
+        //                 x[i].innerHTML = `Weather in : ${city} , temp: ${temp}°C`;
+        //             }
+        //         })
+               
+        // }
+
+
+        function changedata(){
+           let a= document.getElementById("city").value 
+           let b= document.getElementById("state").value 
+            document.getElementById("show").innerHTML = Number(a) + Number(b);
+            document.querySelector("#show").style.BackgroundColor ="Yellow";
+        }
+    </script>
+</body>
+</html>

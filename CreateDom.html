@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+</head>
+<body>
+
+    <div  id="container"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('container');
+
+            const newHeading = document.createElement('h1');
+            const newParagraph = document.createElement('p');element.class
+            const newButton = document.createElement('button');
+            const newList = document.createElement('ul');
+
+            newHeading.textContent = 'This heading is added by createElement';
+            newParagraph.textContent = 'This is a new paragraph added to the DOM through createElement.';
+            newButton.textContent = 'createElement';
+            
+            for (let i = 1; i <= 10; i++) {
+                const listItem = document.createElement('li');
+                listItem.textContent = `List Item num ${i}`;
+                newList.appendChild(listItem);
+            }
+
+            // Append the new elements to the container
+            container.appendChild(newHeading);
+            container.appendChild(newParagraph);
+            container.appendChild(newButton);
+            container.appendChild(newList);
+            
+          
+
+        });
+    </script>
+
+</body>
+</html>

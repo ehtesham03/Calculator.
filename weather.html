@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+       .container { 
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      
+       }
+    </style>
+</head>
+<body>
+    <!-- Weather APP -->
+     <div class="container">
+        <input type="text" class="display" >
+
+
+
+     </div>
+
+
+    
+    <script>
+        let id = 'f6ff2dc49c51b6b97271d341d39dcd53';
+let url = `https://api.openweathermap.org/data/2.5/weather?q=lahore&appid=${id}`;
+
+        document.addEventListener("DOMContentLoaded", function checkWeather() {
+    // Fetch weather data from the API
+    fetch(url)
+        .then(response => {
+           
+            return response.json();
+        })
+        .then(data => {
+            
+            console.log('  Weather Data : ', data.name, data.coord, (data.main.temp-273), data.main.humidity, data.main.checkWeather, data.main  );
+        })
+
+})
+
+checkWeather();
+
+
+
+
+    </script>
+</body>
+</html>
